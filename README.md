@@ -24,3 +24,8 @@ uvicorn agents.system.hypervisor_dashboard.main:app --host 0.0.0.0 --port 8788
 | `POST /api/ask` | `urish ask` NL planning |
 | `POST /api/uri/call` | policy-gated URI execution |
 | `GET /api/events` | observable events stream |
+
+
+## License
+
+Licensed under Apache-2.0.
