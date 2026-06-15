@@ -181,7 +181,7 @@ provides-extras = ["dev"]
 
 [[package]]
 name = "hypervisor-dashboard-agent"
-version = "0.1.1"
+version = "0.1.2"
 source = { editable = "." }
 dependencies = [
     { name = "fastapi" },
