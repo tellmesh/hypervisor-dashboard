@@ -233,7 +233,7 @@ strategies:
   nodejs:
     test: npm test
     build: npm run build
-    publish: twine upload dist/hypervisor-dashboard-agent-{version}*
+    publish: npm publish
     publish_enabled: true
     dependencies:
       file: package-lock.json
@@ -253,6 +253,19 @@ registries:
   npm:
     url: https://registry.npmjs.org/
     token_env: NPM_TOKEN
+publishing:
+  enabled: true
+  registries:
+  - pypi
+  fallback:
+    github_release:
+      enabled: true
+      owner: tellmesh
+      repo: ''
+      repo_map: {}
+      token_env: GITHUB_TOKEN
+      skip_pypi_retries_on_block: true
+      asset_glob: dist/*
 hooks:
   pre_commit: ''
   post_commit: ''
